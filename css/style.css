@@ -141,4 +141,41 @@ to be the main orange color.*/
   .title {
     font-size: 1.25rem;
   }
+  .intro {
+    padding: 0 15%;
+    font-size: 1.1rem;
+  }
+  .column {
+    display: inline-block;
+    width: 48%;
+    margin-right: -4px;
+  }
+  /*
+  1. For the first column, which is the .column:first-child, has 4% margin-right. This is to increase the spacing inbetween our 2 columns.
+  We are adding 4% of the available space.
+  2. Our second column (.column is the 2nd column-- pack accordingly) has -4 margin right. This is so we can put our columns side by side. 
+  We learned this from CSS Tricks. See Below: 
+   .column {
+    display: inline-block;
+    width: 48%;
+    margin-right: -4px;
+
+    .column:first-child {
+    margin-right: 4%;
+    margin-bottom: 0;
+  }
+
+  3. However, having margin right -4 and margin right 4% doesnt work. It breaks both columns vertically. We want them
+  horizontally. This is where we use the "calc" feature.
+
+  4. The calc feature allows us to put both columns side by side, and comfy spacing inbetween both columns.
+  5. See "APPLYING MEDIA QUERIES" if still confused.
+
+  }*/
+
+  /* Pack accordingly column is the SECOND COLUMN and has the -4 margin-right. */
+  .column:first-child {
+    margin-right: calc(4% - 4px);
+    margin-bottom: 0;
+  }
 }
