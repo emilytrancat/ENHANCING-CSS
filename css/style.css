@@ -81,7 +81,14 @@ header, footer {
 }
 
 main {
+  max-width: 1000px;
+  margin: 0 auto;
   hyphens: auto;
+}
+
+section {
+  padding: 4rem 0;
+  border-bottom: 1px dashed #9599a9;
 }
 
 #wildlife {
@@ -112,9 +119,26 @@ main {
   text-align: center;
   font-size: 1.25rem;
 }
+
+.column:first-child {
+  margin-bottom: 4rem;
+}
 /* the reason why we made this lighter is because we need to make the links specifically lighter on
 the dark background... We have other links on the white background. so the main a{ selector needs
 to be the main orange color.*/
 
 /* Media Queries ------------------- */
-
+@media screen and (min-width: 720px) {
+  header {
+    padding: 20vh 1rem;
+  }
+  h1 {
+  font-size: 5rem;
+  }
+  h1::after {
+    margin-top: 1rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+}
