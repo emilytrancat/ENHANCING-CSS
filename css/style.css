@@ -105,6 +105,7 @@ main {
   margin: 1rem auto;
   box-shadow: 1px 2px 3px rgba(0, 10, 30, .5);
   /* margin auto centers button in viewport */
+  background-image: linear-gradient(-30deg, #cc4e13, papayawhip);
   background-color: #cc4e13;
   color: white;
   text-align: center;
